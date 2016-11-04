@@ -7,6 +7,11 @@ import nunjucks from 'gulp-nunjucks';
 import sourcemaps from 'gulp-sourcemaps';
 import stylus from 'gulp-stylus';
 
+
+const stylesheets = [
+    './media/stylus/main.styl',
+];
+
 gulp.task('default', ['build']);
 
 gulp.task('build', ['build:html', 'build:css']);
@@ -23,9 +28,14 @@ gulp.task('build:html', () => {
 });
 
 gulp.task('build:css', () => {
-    gulp.src('./media/stylus/*.styl')
+    gulp.src(stylesheets)
         .pipe(sourcemaps.init())
         .pipe(stylus())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./build/css'))
+});
+
+gulp.task('watch', ['build'], () => {
+    gulp.watch('./templates/*.html', ['build:html']);
+    gulp.watch(stylesheets, ['build:css']);
 });
