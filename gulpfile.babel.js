@@ -17,5 +17,5 @@ gulp.task('build:html', () => {
     gulp.src('templates/index.html')
         .pipe(data(() => context))
         .pipe(nunjucks.compile())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('build'));
 });
