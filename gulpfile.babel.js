@@ -2,6 +2,8 @@ import gulp from 'gulp';
 
 import fs from 'fs';
 
+import autoprefixer from 'gulp-autoprefixer';
+import cleanCSS from 'gulp-clean-css';
 import concat from 'gulp-concat';
 import data from 'gulp-data';
 import nunjucks from 'gulp-nunjucks';
@@ -33,7 +35,9 @@ gulp.task('build:css', () => {
     gulp.src(stylesheets)
         .pipe(sourcemaps.init())
         .pipe(stylus())
+        .pipe(autoprefixer())
         .pipe(concat('main.css'))
+        .pipe(cleanCSS())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./build/css'))
 });
