@@ -9,10 +9,20 @@ body {
 
 header {
     height: 100px;
-    display: flex;
-    align-items: center;
     background-color: #ddd;
-    padding: 20px;
+
+    /* Hack to vertically center the title while still playing nice with
+       Tabzilla */
+    .wrapper {
+        align-items: center;
+        display: flex;
+        float: left;
+        height: 100%;
+    }
+
+    h1 {
+        margin: 0 0 0 20px;
+    }
 
     a {
         color: #000;

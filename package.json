@@ -10,6 +10,7 @@
     "gulp-data": "^1.2.1",
     "gulp-nunjucks": "^2.3.0",
     "gulp-sourcemaps": "^2.2.0",
-    "gulp-stylus": "^2.6.0"
+    "gulp-stylus": "^2.6.0",
+    "mozilla-tabzilla": "^0.5.1"
   }
 }

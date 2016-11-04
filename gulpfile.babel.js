@@ -14,9 +14,14 @@ import stylus from 'gulp-stylus';
 const stylesheets = [
     './media/stylus/main.styl',
     './media/stylus/site-listing.styl',
+    './media/stylus/tabzilla-customizations.styl',
 ];
 
-gulp.task('default', ['build']);
+const neededModules = [
+    './node_modules/mozilla-tabzilla/**/*',
+];
+
+gulp.task('default', ['build', 'copy:needed-modules']);
 
 gulp.task('build', ['build:html', 'build:css']);
 
@@ -39,10 +44,16 @@ gulp.task('build:css', () => {
         .pipe(concat('main.css'))
         .pipe(cleanCSS())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./build/css'))
+        .pipe(gulp.dest('./build/media/css'))
 });
 
-gulp.task('watch', ['build'], () => {
+gulp.task('copy:needed-modules', () => {
+    gulp.src(neededModules, { base: '.' })
+        .pipe(gulp.dest('./build'));
+});
+
+gulp.task('watch', ['default'], () => {
     gulp.watch('./templates/*.html', ['build:html']);
     gulp.watch(stylesheets, ['build:css']);
+    gulp.watch(neededModules, ['copy:needed-modules']);
 });

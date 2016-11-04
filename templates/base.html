@@ -1,13 +1,19 @@
 <!doctype html>
-<html lang="en-US" dir="ltr">
+<html id="datacenter" lang="en-US" dir="ltr">
     <head>
         <meta charset="utf-8" />
         <title>Mozilla Data Tools</title>
-        <link href="css/main.css" rel="stylesheet" />
+        <link rel="stylesheet" href="media/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="node_modules/mozilla-tabzilla/css/tabzilla.css" media="screen" />
     </head>
     <body>
         <header>
-            <h1><a href="/">Mozilla Data Tools</a></h1>
+            <div class="wrapper">
+                <h1><a href="/">Mozilla Data Tools</a></h1>
+            </div>
+            <div id="tabzilla">
+                <a href="https://www.mozilla.org/">Mozilla</a>
+            </div>
         </header>
         <main>
             {% block main %}{% endblock %}
