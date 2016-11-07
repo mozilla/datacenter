@@ -14,7 +14,7 @@ import webserver from 'gulp-webserver';
 
 const stylesheets = [
     './media/stylus/main.styl',
-    './media/stylus/site-listing.styl',
+    './media/stylus/home.styl',
     './media/stylus/tabzilla-customizations.styl',
 ];
 
