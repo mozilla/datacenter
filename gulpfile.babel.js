@@ -9,6 +9,7 @@ import data from 'gulp-data';
 import nunjucks from 'gulp-nunjucks';
 import sourcemaps from 'gulp-sourcemaps';
 import stylus from 'gulp-stylus';
+import webserver from 'gulp-webserver';
 
 
 const stylesheets = [
@@ -21,9 +22,9 @@ const neededModules = [
     './node_modules/mozilla-tabzilla/**/*',
 ];
 
-gulp.task('default', ['build', 'copy:needed-modules']);
+gulp.task('default', ['build']);
 
-gulp.task('build', ['build:html', 'build:css']);
+gulp.task('build', ['build:html', 'build:css', 'build:copy-needed-modules']);
 
 gulp.task('build:html', () => {
     const context = {
@@ -47,7 +48,7 @@ gulp.task('build:css', () => {
         .pipe(gulp.dest('./build/media/css'))
 });
 
-gulp.task('copy:needed-modules', () => {
+gulp.task('build:copy-needed-modules', () => {
     gulp.src(neededModules, { base: '.' })
         .pipe(gulp.dest('./build'));
 });
@@ -55,5 +56,13 @@ gulp.task('copy:needed-modules', () => {
 gulp.task('watch', ['default'], () => {
     gulp.watch('./templates/*.html', ['build:html']);
     gulp.watch(stylesheets, ['build:css']);
-    gulp.watch(neededModules, ['copy:needed-modules']);
+    gulp.watch(neededModules, ['build:copy-needed-modules']);
+});
+
+gulp.task('serve', ['default'], () => {
+    gulp.src('build')
+        .pipe(webserver({
+            host: '0.0.0.0',
+            port: process.env.PORT || 3000
+        }));
 });
