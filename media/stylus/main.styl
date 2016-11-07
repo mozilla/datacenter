@@ -1,3 +1,6 @@
+@import 'vars';
+
+
 * {
     box-sizing: border-box;
 }
@@ -11,27 +14,28 @@ header {
     height: 100px;
     background-color: #ddd;
 
-    /* Hack to vertically center the title while still playing nice with
-       Tabzilla */
-    .wrapper {
-        align-items: center;
-        display: flex;
-        float: left;
-        height: 100%;
-    }
-
-    h1 {
-        margin: 0 0 0 20px;
-    }
-
     a {
         color: #000;
     }
 }
 
+/* Hack to vertically center the title while still playing nice with
+   Tabzilla */
+#h1-wrapper {
+    align-items: center;
+    display: flex;
+    float: left;
+    height: 100%;
+}
+
+h1 {
+    margin: 0 0 0 20px;
+}
+
 main {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 p {
@@ -42,4 +46,18 @@ a {
     color: #217ac0;
     font-weight: bold;
     text-decoration: none;
+}
+
+@media $mq-small-phone-or-smaller {
+    #h1-wrapper {
+        width: 100%;
+    }
+
+    h1 {
+        margin: 0 auto;
+    }
+
+    #tabzilla {
+        display: none;
+    }
 }
