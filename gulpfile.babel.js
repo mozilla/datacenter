@@ -7,6 +7,7 @@ import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
 import concat from 'gulp-concat';
 import data from 'gulp-data';
+import gutil from 'gulp-util';
 import nunjucks from 'gulp-nunjucks';
 import sourcemaps from 'gulp-sourcemaps';
 import stylus from 'gulp-stylus';
@@ -29,6 +30,12 @@ const neededModules = [
 const images = './media/img/*';
 
 const fonts = './media/fonts/*';
+
+
+function _log(req, res, next) {
+    gutil.log(req.method, req.url, 'HTTP/' + req.httpVersion);
+    next();
+}
 
 
 gulp.task('default', ['build']);
@@ -78,7 +85,7 @@ gulp.task('build:copy-fonts', () => {
         .pipe(gulp.dest(path.join(buildDirectory, path.dirname(fonts))));
 });
 
-gulp.task('watch', ['default'], () => {
+gulp.task('watch', ['build'], () => {
     gulp.watch('./templates/*.html', ['build:html']);
     gulp.watch(stylesheets, ['build:css']);
     gulp.watch(neededModules, ['build:copy-needed-modules']);
@@ -86,10 +93,11 @@ gulp.task('watch', ['default'], () => {
     gulp.watch(fonts, ['build:copy-fonts']);
 });
 
-gulp.task('serve', ['default'], () => {
+gulp.task('serve', ['build'], () => {
     gulp.src(buildDirectory)
         .pipe(webserver({
             host: '0.0.0.0',
-            port: process.env.PORT || 3000
+            port: process.env.PORT || 3000,
+            middleware: _log,
         }));
 });
