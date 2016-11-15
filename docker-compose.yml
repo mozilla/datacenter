@@ -17,7 +17,7 @@ web:
         - ./media:/app/media
         - ./sites.json:/app/sites.json
 
-    # Make the host $PORT environment variable available inside the container
+    # Make the host's $PORT environment variable available inside the container
     environment:
         - PORT
 
