@@ -93,7 +93,7 @@ gulp.task('watch', ['build'], () => {
     gulp.watch(fonts, ['build:copy-fonts']);
 });
 
-gulp.task('serve', ['build'], () => {
+gulp.task('serve', ['watch'], () => {
     gulp.src(buildDirectory)
         .pipe(webserver({
             host: '0.0.0.0',

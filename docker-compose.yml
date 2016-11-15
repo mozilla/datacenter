@@ -1,0 +1,10 @@
+web:
+    build: .
+    volumes:
+        - ./templates:/app/templates
+        - ./media:/app/media
+        - ./sites.json:/app/sites.json
+    ports:
+        - "${PORT}:${PORT}"
+    environment:
+        - PORT

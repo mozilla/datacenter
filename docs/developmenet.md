@@ -1,10 +1,8 @@
-## Build
+## Run
 
 1. Install Docker
     * [Mac](https://docs.docker.com/docker-for-mac/)
-2. `docker build -t datacenter .`
-
-## Run
-
-1. `PORT=3000 docker run -e PORT -p 3000:3000 datacenter`
-2. Navigate to [localhost:3000](http://localhost:3000)
+2. Run `PORT=3000 docker-compose up`
+    * Change the value of `PORT` to use a different port. `PORT` can
+      alternatively be exported rather than being prepended to the command.
+3. Navigate to [localhost:3000](http://localhost:3000)
