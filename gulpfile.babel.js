@@ -7,6 +7,8 @@ import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
 import concat from 'gulp-concat';
 import data from 'gulp-data';
+import fse from 'fs-extra';
+import gitRev from 'git-rev';
 import gutil from 'gulp-util';
 import nunjucks from 'gulp-nunjucks';
 import sourcemaps from 'gulp-sourcemaps';
@@ -46,6 +48,7 @@ gulp.task('build', [
     'build:copy-needed-modules',
     'build:copy-images',
     'build:copy-fonts',
+    'build:version.json',
 ]);
 
 gulp.task('build:html', () => {
@@ -83,6 +86,18 @@ gulp.task('build:copy-images', () => {
 gulp.task('build:copy-fonts', () => {
     gulp.src(fonts)
         .pipe(gulp.dest(path.join(buildDirectory, path.dirname(fonts))));
+});
+
+gulp.task('build:version.json', () => {
+    gitRev.long(commitHash => {
+        const version = {
+            'source': 'https://github.com/openjck/datacenter',
+            'version': process.env.NODE_ENV || '',
+            'commit': commitHash,
+        };
+
+        fse.outputJson(path.join(buildDirectory, 'app/version.json'), version);
+    });
 });
 
 gulp.task('watch', ['build'], () => {
