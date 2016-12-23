@@ -33,6 +33,27 @@ const images = './media/img/*';
 
 const fonts = './media/fonts/*';
 
+const versionFilename = path.join(buildDirectory, 'app/version.json');
+
+
+// Handle endpoints required by Dockerflow
+// See https://github.com/mozilla-services/Dockerflow/blob/643b1a26dfef80e9fc0b5a4d356d92d73edd012d/README.md
+function _handleDockerflowEndpoints(req, res, next) {
+    switch (req.url) {
+        case '/__heartbeat__':
+        case '/__lbheartbeat__':
+            res.writeHead(200);
+            res.end('OK');
+            break;
+        case '/__version__':
+            const versionContents = fs.readFileSync(versionFilename);
+            res.writeHead(200, {'Content-Type': 'application/json'});
+            res.end(versionContents);
+            break;
+    }
+
+    next();
+}
 
 function _log(req, res, next) {
     gutil.log(req.method, req.url, 'HTTP/' + req.httpVersion);
@@ -96,7 +117,7 @@ gulp.task('build:version.json', () => {
             'commit': commitHash,
         };
 
-        fse.outputJson(path.join(buildDirectory, 'app/version.json'), version);
+        fse.outputJson(versionFilename, version);
     });
 });
 
@@ -113,6 +134,9 @@ gulp.task('serve', ['watch'], () => {
         .pipe(webserver({
             host: '0.0.0.0',
             port: process.env.PORT || 3000,
-            middleware: _log,
+            middleware: [
+                _handleDockerflowEndpoints,
+                _log,
+            ],
         }));
 });
