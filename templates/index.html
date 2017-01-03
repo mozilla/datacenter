@@ -9,11 +9,11 @@
     and skill sets.
 </p>
 <nav id="site-listing">
-    <ul>
+    <ul class="sites">
         {% for site in sites %}
-        <li>
-            <a href="{{ site.url }}">{{ site.title }}</a>
-            <p>{{ site.description }}</p>
+        <li class="site">
+            <a class="title" href="{{ site.url }}">{{ site.title }}</a>
+            {{ site.description }}
         </li>
         {% endfor %}
     </ul>

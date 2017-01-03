@@ -10,6 +10,7 @@ import data from 'gulp-data';
 import fse from 'fs-extra';
 import gitRev from 'git-rev';
 import gutil from 'gulp-util';
+import marked from 'marked';
 import nunjucks from 'gulp-nunjucks';
 import sourcemaps from 'gulp-sourcemaps';
 import stylus from 'gulp-stylus';
@@ -35,6 +36,13 @@ const fonts = './media/fonts/*';
 
 const versionFilename = path.join(buildDirectory, 'app/version.json');
 
+// Sanitize Markdown as an added precaution over code reviews and disable GFM
+// until we really need it.
+marked.setOptions({
+    gfm: false,
+    tables: false,
+    sanitize: true,
+});
 
 // Handle endpoints required by Dockerflow
 // See https://github.com/mozilla-services/Dockerflow/blob/643b1a26dfef80e9fc0b5a4d356d92d73edd012d/README.md
@@ -73,13 +81,24 @@ gulp.task('build', [
 ]);
 
 gulp.task('build:html', () => {
-    const context = {
-        sites: JSON.parse(fs.readFileSync('./sites.json')),
+    const sites = JSON.parse(fs.readFileSync('./sites.json'));
+
+    // Parse Markdown in site descriptions
+    for (let site in sites) {
+        if (sites.hasOwnProperty(site)) {
+            sites[site].description = marked(sites[site].description);
+        }
     }
 
+    const context = {
+        sites,
+    }
+
+    // Nunjucks is being passed the (sanitized) output of the Markdown parser,
+    // so it shouldn't escape any HTML.
     gulp.src('./templates/index.html')
         .pipe(data(() => context))
-        .pipe(nunjucks.compile())
+        .pipe(nunjucks.compile({}, {autoescape: false}))
         .pipe(gulp.dest(buildDirectory));
 });
 

@@ -19,6 +19,7 @@
     "gulp-stylus": "^2.6.0",
     "gulp-util": "^3.0.7",
     "gulp-webserver": "^0.9.1",
+    "marked": "^0.3.6",
     "mozilla-tabzilla": "^0.5.1"
   }
 }
