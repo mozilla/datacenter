@@ -1,152 +1,27 @@
 [
     {
-        "title":"Id pretium iaculis",
-        "url":"http://example.com#SWQgcHJldGl1bSBpYWN1bGlz",
-        "description":"Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien."
+        "title":"sql.telemetry.mozilla.org",
+        "url":"https://sql.telemetry.mozilla.org/",
+        "description":"The sql.telemetry.mozilla.org (s.t.m.o) site is an instance of the very fine [redash](https://getredash.io/) software, allowing for SQL-based exploratory analysis and visualization / dashboard construction. Requires (surprise!) familiarity with SQL, and for your data to be explicitly exposed as an s.t.m.o data source. Bugs or feature requests can be reported in our [issue tracker](https://github.com/mozilla/redash/issues)."
     },
     {
-        "title":"Aliquam sit amet diam",
-        "url":"http://example.com#QWxpcXVhbSBzaXQgYW1ldCBkaWFt",
-        "description":"Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+        "title":"analysis.telemetry.mozilla.org",
+        "url":"https://analysis.telemetry.mozilla.org/",
+        "description":"The analysis.telemetry.mozilla.org (a.t.m.o) site can be used to launch and gain access to virtual machines that are running an [Apache Spark](https://spark.apache.org/) cluster, preconfigured with access to the raw data stored in our long term storage (LTS) S3 buckets. Spark allows you to use Python or Scala to perform arbitrary analysis and generate arbitrary output. Once developed, a.t.m.o can also be used to run recurring Spark jobs for data transformation, processing, or reporting. Requires Python or Scala programming skills and knowledge of various data APIs. Learn more by visiting the [documentation](https://wiki.mozilla.org/Telemetry) or [tutorials](https://wiki.mozilla.org/Telemetry/Custom_analysis_with_spark)."
     },
     {
-        "title":"Aenean fermentum donec ut",
-        "url":"http://example.com#QWVuZWFuIGZlcm1lbnR1bSBkb25lYyB1dA==",
-        "description":"Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci."
+        "title":"Distribution Viewer",
+        "url":"https://gauss.telemetry.mozilla.org/",
+        "description":"Distribution Viewer is a simple tool that provides a set of [cumulative distribution](http://math.stackexchange.com/questions/52400/what-is-cdf-cumulative-distribution-function) graphs for a pre-specified selection of Firefox-related metrics from a 1% sample of clientIds from Unified Telemetry. These plots will allow you to understand how values of different metrics are spread out among our population of users rather than just using a one number summary (such as a mean or median). By viewing the entire distribution, you can get a sense of the importance of behavior at the extremes as well as anomalies within the population that might indicate interesting behavior. Very simple to use (no programming required) and able to provide interesting insights, but not usually suitable for ad-hoc analysis."
     },
     {
-        "title":"A pede posuere",
-        "url":"http://example.com#QSBwZWRlIHBvc3VlcmU=",
-        "description":"Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique."
+        "title":"telemetry.mozilla.org",
+        "url":"https://telemetry.mozilla.org/",
+        "description":"Our telemetry.mozilla.org (t.m.o) site is the 'venerable standby' of the Firefox telemetry analysis tools. It uses aggregate telemetry data (as opposed to the collated data sets that are exposed to most of the other tools) so it provides less latency than most but is unsuitable for examining at the individual client level. It provides a powerful UI that allows for sophisticated ad-hoc analysis without the need for any specialized programming skills, but with so many options the UI can be a bit intimidating for novice users."
     },
     {
-        "title":"Vitae quam suspendisse potenti",
-        "url":"http://example.com#Vml0YWUgcXVhbSBzdXNwZW5kaXNzZSBwb3RlbnRp",
-        "description":"Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue."
-    },
-    {
-        "title":"Fermentum justo nec condimentum",
-        "url":"http://example.com#RmVybWVudHVtIGp1c3RvIG5lYyBjb25kaW1lbnR1bQ==",
-        "description":"Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue."
-    },
-    {
-        "title":"Luctus et",
-        "url":"http://example.com#THVjdHVzIGV0",
-        "description":"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl."
-    },
-    {
-        "title":"Cursus id turpis integer",
-        "url":"http://example.com#Q3Vyc3VzIGlkIHR1cnBpcyBpbnRlZ2Vy",
-        "description":"Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum."
-    },
-    {
-        "title":"Sapien quis",
-        "url":"http://example.com#U2FwaWVuIHF1aXM=",
-        "description":"Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien."
-    },
-    {
-        "title":"Nascetur ridiculus",
-        "url":"http://example.com#TmFzY2V0dXIgcmlkaWN1bHVz",
-        "description":"Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus."
-    },
-    {
-        "title":"Convallis tortor",
-        "url":"http://example.com#Q29udmFsbGlzIHRvcnRvcg==",
-        "description":"Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum."
-    },
-    {
-        "title":"Montes nascetur ridiculus",
-        "url":"http://example.com#TW9udGVzIG5hc2NldHVyIHJpZGljdWx1cw==",
-        "description":"Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst."
-    },
-    {
-        "title":"Ultrices phasellus id",
-        "url":"http://example.com#VWx0cmljZXMgcGhhc2VsbHVzIGlk",
-        "description":"Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo."
-    },
-    {
-        "title":"Mauris vulputate",
-        "url":"http://example.com#TWF1cmlzIHZ1bHB1dGF0ZQ==",
-        "description":"Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus."
-    },
-    {
-        "title":"Odio condimentum",
-        "url":"http://example.com#T2RpbyBjb25kaW1lbnR1bQ==",
-        "description":"Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy."
-    },
-    {
-        "title":"Mauris vulputate elementum",
-        "url":"http://example.com#TWF1cmlzIHZ1bHB1dGF0ZSBlbGVtZW50dW0=",
-        "description":"Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique."
-    },
-    {
-        "title":"Erat volutpat",
-        "url":"http://example.com#RXJhdCB2b2x1dHBhdA==",
-        "description":"Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti."
-    },
-    {
-        "title":"Sed nisl",
-        "url":"http://example.com#U2VkIG5pc2w=",
-        "description":"Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius."
-    },
-    {
-        "title":"Luctus nec molestie sed",
-        "url":"http://example.com#THVjdHVzIG5lYyBtb2xlc3RpZSBzZWQ=",
-        "description":"Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum."
-    },
-    {
-        "title":"Elit proin risus",
-        "url":"http://example.com#RWxpdCBwcm9pbiByaXN1cw==",
-        "description":"Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi."
-    },
-    {
-        "title":"Odio in",
-        "url":"http://example.com#T2RpbyBpbg==",
-        "description":"Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio."
-    },
-    {
-        "title":"Suspendisse potenti cras in",
-        "url":"http://example.com#U3VzcGVuZGlzc2UgcG90ZW50aSBjcmFzIGlu",
-        "description":"Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst."
-    },
-    {
-        "title":"Praesent lectus",
-        "url":"http://example.com#UHJhZXNlbnQgbGVjdHVz",
-        "description":"Nunc purus. Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi."
-    },
-    {
-        "title":"Sed augue",
-        "url":"http://example.com#U2VkIGF1Z3Vl",
-        "description":"Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque."
-    },
-    {
-        "title":"Posuere cubilia curae",
-        "url":"http://example.com#UG9zdWVyZSBjdWJpbGlhIGN1cmFl",
-        "description":"Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum."
-    },
-    {
-        "title":"Primis in",
-        "url":"http://example.com#UHJpbWlzIGlu",
-        "description":"Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla."
-    },
-    {
-        "title":"Odio condimentum id",
-        "url":"http://example.com#T2RpbyBjb25kaW1lbnR1bSBpZA==",
-        "description":"Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien."
-    },
-    {
-        "title":"Venenatis turpis",
-        "url":"http://example.com#VmVuZW5hdGlzIHR1cnBpcw==",
-        "description":"Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque."
-    },
-    {
-        "title":"Nibh in quis",
-        "url":"http://example.com#TmliaCBpbiBxdWlz",
-        "description":"Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo."
-    },
-    {
-        "title":"Purus eu magna",
-        "url":"http://example.com#UHVydXMgZXUgbWFnbmE=",
-        "description":"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna."
+        "title":"Real Time / CEP",
+        "url":"https://pipeline-cep.prod.mozaws.net/",
+        "description":"The 'real time' or 'complex event processing' (CEP) system is part of the ingestion infrastructure that processes all of our Firefox telemetry data. It provides extremely low latency access to the data as it's flowing through our ingestion system on its way to long term storage. As a CEP system, it is unlike the rest of our analysis tools in that it is up to the analyst to specify and maintain state from the data that is flowing; it is non-trivial to revisit older data that has already passed through the system. The CEP is very powerful, allowing for sophisticated monitoring, alerting, reporting, and dashboarding. Developing new analysis modules (called 'filters') requires knowledge of the Lua programming language, relevant APIs, and a custom filter configuration syntax."
     }
 ]
