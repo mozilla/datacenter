@@ -46,7 +46,7 @@ marked.setOptions({
 
 // Handle endpoints required by Dockerflow
 // See https://github.com/mozilla-services/Dockerflow/blob/643b1a26dfef80e9fc0b5a4d356d92d73edd012d/README.md
-function _handleDockerflowEndpoints(req, res, next) {
+function _dockerflowMiddleware(req, res, next) {
     switch (req.url) {
         case '/__heartbeat__':
         case '/__lbheartbeat__':
@@ -63,9 +63,22 @@ function _handleDockerflowEndpoints(req, res, next) {
     next();
 }
 
-function _log(req, res, next) {
+function _logMiddleware(req, res, next) {
     gutil.log(req.method, req.url, 'HTTP/' + req.httpVersion);
     next();
+}
+
+function _RequireHTTPSMiddleware(req, res, next) {
+    // We would normally set the Strict-Transport-Security header, but that
+    // doesn't do the trick on Heroku due to its proxy setup.
+    // http://stackoverflow.com/a/7261883
+    // http://stackoverflow.com/a/15116765
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+        res.writeHead(301, {'Location': 'https://' + req.headers.host + req.url});
+        res.end();
+    } else {
+        next();
+    }
 }
 
 
@@ -154,8 +167,9 @@ gulp.task('serve', ['watch'], () => {
             host: '0.0.0.0',
             port: process.env.PORT || 3000,
             middleware: [
-                _handleDockerflowEndpoints,
-                _log,
+                _logMiddleware,
+                _dockerflowMiddleware,
+                _RequireHTTPSMiddleware,
             ],
         }));
 });
