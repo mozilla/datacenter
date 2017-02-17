@@ -2,7 +2,7 @@
     {
         "title":"sql.telemetry.mozilla.org",
         "url":"https://sql.telemetry.mozilla.org/",
-        "description":"The sql.telemetry.mozilla.org (s.t.m.o) site is an instance of the very fine [redash](https://getredash.io/) software, allowing for SQL-based exploratory analysis and visualization / dashboard construction. Requires (surprise!) familiarity with SQL, and for your data to be explicitly exposed as an s.t.m.o data source. Bugs or feature requests can be reported in our [issue tracker](https://github.com/mozilla/redash/issues)."
+        "description":"The sql.telemetry.mozilla.org (s.t.m.o) site is an instance of the very fine [redash](https://redash.io/) software, allowing for SQL-based exploratory analysis and visualization / dashboard construction. Requires (surprise!) familiarity with SQL, and for your data to be explicitly exposed as an s.t.m.o data source. Bugs or feature requests can be reported in our [issue tracker](https://github.com/mozilla/redash/issues)."
     },
     {
         "title":"analysis.telemetry.mozilla.org",
