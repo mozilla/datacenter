@@ -1,9 +1,0 @@
-*.sw?
-.DS_Store
-.git
-.gitignore
-LICENSE
-README.md
-build
-docs
-node_modules

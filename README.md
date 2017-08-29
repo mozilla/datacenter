@@ -1,2 +1,3 @@
-Datacenter powers [start.telemetry.mozilla.org](https://start.telemetry.mozilla.org/),
-a landing page that directs visitors to data tools and services at Mozilla.
+Datacenter formerly provided a landing page that directed visitors to data tools
+and services at Mozilla. It now redirects to
+[docs.telemetry.mozilla.org](https://docs.telemetry.mozilla.org/).
