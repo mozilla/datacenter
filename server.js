@@ -1,13 +1,13 @@
-const express = require('express');
+const http = require('http');
 
 
-const app = express();
 const port = process.env.PORT || 3000;
 
-app.all('*', function(req, res) {
-    res.redirect(302, 'https://docs.telemetry.mozilla.org/');
+const server = http.createServer(function(req, res) {
+    res.writeHead(302, {Location: 'https://docs.telemetry.mozilla.org/'});
+    res.end();
 });
 
-app.listen(port, function() {
+server.listen(port, function() {
     console.log('Listening on port ' + port + '...');
 });

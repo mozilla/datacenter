@@ -2,8 +2,5 @@
   "name": "datacenter",
   "scripts": {
     "start": "node server"
-  },
-  "dependencies": {
-    "express": "^4.15.4"
   }
 }
